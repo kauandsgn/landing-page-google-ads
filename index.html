@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads do Zero | Alta Conversão</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        google: {
+                            blue: '#4285F4',
+                            red: '#DB4437',
+                            yellow: '#F4B400',
+                            green: '#0F9D58',
+                            blueLight: '#E8F0FE',
+                            redLight: '#FCE8E6',
+                            yellowLight: '#FEF7E0',
+                            greenLight: '#E6F4EA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        /* Glassmorphism utility */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.from-left {
+            transform: translateX(-50px);
+        }
+
+        .reveal.from-right {
+            transform: translateX(50px);
+        }
+
+        .reveal.scale-in {
+            transform: scale(0.93);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .reveal-delay-5 {
+            transition-delay: 0.5s;
+        }
+
+        .reveal-delay-6 {
+            transition-delay: 0.6s;
+        }
+
+        .reveal-delay-7 {
+            transition-delay: 0.7s;
+        }
+
+        /* ===== HERO BACKGROUND ===== */
+
+        /* Desktop: foto como background da section inteira.
+           Imagem já tem área branca à esquerda onde o texto fica. */
+        .hero-section {
+            background-color: #fafafa;
+            background-image: url('https://i.ibb.co/VYL88wWx/Hero-Alan-Lopes-desk.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            /* Layout desktop */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Mobile: a imagem volta a ser background. Usamos padding-top 
+           para que o texto comece exatamente sobre a área branca da imagem. */
+        @media (max-width: 1023px) {
+            .hero-section {
+                background-image: url('https://i.ibb.co/MxVnb0x8/Hero-Alan-Lopes-mobile.png');
+                background-size: 100% auto;
+                background-position: top center;
+                background-color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                min-height: 100vh;
+                padding-top: 82vw;
+                /* Ajustado para 82vw: texto sobe mais um pouco e é 100% responsivo */
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-slate-800 antialiased selection:bg-google-blue selection:text-white">
+
+    <!-- Hero Section (Dobra 1) -->
+    <section class="hero-section overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Esquerda: Copy e CTA -->
+            <div class="lg:col-span-5 flex flex-col justify-center mt-6 lg:mt-0 relative z-[2] text-center lg:text-left">
+                <span
+                    class="inline-block py-1.5 px-4 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold tracking-wide mb-6 border border-slate-200 w-fit mx-auto lg:mx-0 shadow-sm">
+                    Para donos de negócio que querem resultado de verdade
+                </span>
+
+                <h1
+                    class="text-6xl md:text-7xl lg:text-[5.5rem] font-black tracking-tighter leading-[0.95] mb-6 text-[#333333]">
+                    Google Ads<br>do Zero.
+                </h1>
+
+                <p class="text-lg text-slate-600 leading-relaxed mb-6 max-w-lg font-medium mx-auto lg:mx-0">
+                    Aprenda a criar campanhas no Google Ads que realmente funcionam para atrair clientes todos os dias,
+                    sem desperdiçar verba e sem depender de agência.
+                </p>
+
+                <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-lg font-medium mx-auto lg:mx-0">
+                    Do básico até estratégias avançadas — passo a passo simples, direto e 100% prático.
+                </p>
+
+                <div class="flex justify-center lg:justify-start">
+                    <a href="#oferta"
+                        class="inline-flex items-center justify-center px-10 py-4 bg-google-blue text-white font-bold text-sm lg:text-base uppercase tracking-widest rounded-full transition-all border-[4px] border-[#d2e3fc] hover:bg-[#3367D6] hover:border-[#aecbfa] shadow-sm hover:-translate-y-1">
+                        Quero garantir minha vaga
+                    </a>
+                </div>
+            </div>
+
+            <!-- Direita: Cards flutuantes (hidden no mobile) -->
+            <div
+                class="hidden lg:flex lg:col-span-7 relative lg:h-[800px] items-end justify-center pointer-events-none">
+
+                <!-- Floating UI Cards -->
+                <!-- Card 1: Orçamento (Top Left) -->
+                <div
+                    class="absolute top-[20%] left-0 z-20 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-xl border border-slate-100 animate-[bounce_4s_infinite] w-48 hidden md:block">
+                    <p class="text-[10px] text-google-blue font-bold mb-2">R$ <span
+                            class="float-right text-slate-300">R$$</span></p>
+                    <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="w-1/3 h-full bg-google-blue"></div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Conversões Chart (Bottom Center/Left) -->
+                <div
+                    class="absolute bottom-[10%] left-[5%] z-20 bg-white/90 backdrop-blur-md rounded-xl p-5 shadow-xl border border-slate-100 animate-[bounce_5s_infinite_0.5s] w-64 hidden md:block">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-bold text-slate-800">Conversões</span>
+                        <span
+                            class="text-[10px] font-bold text-google-green bg-google-greenLight px-2 py-0.5 rounded-md">Mais
+                            de 100 mil</span>
+                    </div>
+                    <!-- Simple SVG Line Chart -->
+                    <svg viewBox="0 0 100 30" class="w-full h-12 overflow-visible">
+                        <polyline points="0,25 20,10 40,20 60,5 80,25 100,0" fill="none" stroke="#0F9D58"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="0" cy="25" r="2" fill="#0F9D58" />
+                        <circle cx="20" cy="10" r="2" fill="#0F9D58" />
+                        <circle cx="40" cy="20" r="2" fill="#0F9D58" />
+                        <circle cx="60" cy="5" r="2" fill="#0F9D58" />
+                        <circle cx="80" cy="25" r="2" fill="#0F9D58" />
+                        <circle cx="100" cy="0" r="2" fill="#0F9D58" />
+                    </svg>
+                </div>
+
+                <!-- Card 3: Limite de orçamento (Right) -->
+                <div
+                    class="absolute top-[40%] right-[-5%] z-20 bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-slate-100 animate-[bounce_6s_infinite_1s] w-72 hidden lg:block">
+                    <p class="text-xs font-bold text-slate-800 mb-6">Limite de orçamento mensal</p>
+                    <div class="flex justify-between text-[10px] text-google-blue font-bold mb-2">
+                        <span>R$</span>
+                        <span class="text-slate-300">R$$</span>
+                    </div>
+                    <div class="w-full h-1 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="w-2/3 h-full bg-google-blue"></div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+
+
+    <!-- Dores & Identificação -->
+    <section class="py-24 bg-slate-50 border-t border-slate-100 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 mb-4">
+                    Você se identifica?
+                </h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">Você tentou anunciar no Google e só
+                    perdeu dinheiro?<br>Se você é dono de uma pequena ou média empresa e já ficou frustrado com
+                    campanhas que não funcionam, esse curso é para você.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1 (Azul) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group reveal reveal-delay-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-google-blueLight text-google-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Verba evaporando sem resultado</h3>
+                    <p class="text-slate-500 leading-relaxed">Você colocou crédito, a campanha rodou, mas as vendas não
+                        apareceram. O dinheiro foi embora sem explicação.</p>
+                </div>
+
+                <!-- Card 2 (Vermelho) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group reveal reveal-delay-2">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-google-redLight text-google-red flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                            <path d="M3 3v5h5" />
+                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                            <path d="M16 21v-5h5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Plataforma confusa demais</h3>
+                    <p class="text-slate-500 leading-relaxed">O Google Ads é cheio de opções e termos técnicos que
+                        parecem um labirinto impossível de resolver sozinho.</p>
+                </div>
+
+                <!-- Card 3 (Amarelo) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group reveal reveal-delay-3">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-google-yellowLight text-google-yellow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Agência cara sem retorno</h3>
+                    <p class="text-slate-500 leading-relaxed">Você pagou caro por uma agência ou freelancer, mas não viu
+                        resultado — e ainda ficou sem entender o que foi feito.</p>
+                </div>
+
+                <!-- Card 4 (Verde) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group reveal reveal-delay-4">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-google-greenLight text-google-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Cliques inúteis o tempo todo</h3>
+                    <p class="text-slate-500 leading-relaxed">Seu anúncio aparece para quem não é seu cliente ideal.
+                        Resultado: muito gasto, pouquíssima conversão.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- O Método 40-200 -->
+    <section class="py-24 px-6 bg-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto text-center mb-16 reveal">
+            <span class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 block">A Solução
+                Definitiva</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-6">
+                <span class="text-google-blue">O</span>
+                <span class="text-google-red">M</span><span class="text-google-yellow">É</span><span
+                    class="text-google-green">T</span><span class="text-google-blue">O</span><span
+                    class="text-google-red">D</span><span class="text-google-yellow">O</span>
+                <span class="text-slate-900 ml-2">40-200</span>
+            </h2>
+            <p class="text-lg text-slate-500 font-medium max-w-3xl mx-auto">
+                Com o Método 40-200 você ganha clareza, controle e resultado nas suas campanhas — gerando de 40 a 200
+                novos contatos por mês, mesmo que nunca tenha criado um anúncio antes.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex gap-4 items-start">
+                <div
+                    class="mt-1 w-8 h-8 rounded-full bg-google-blueLight flex items-center justify-center flex-shrink-0">
+                    <div class="w-3 h-3 rounded-full bg-google-blue"></div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Segmentação Precisa</h4>
+                    <p class="text-slate-500">Aprenda a segmentar o público certo e evitar cliques inúteis que drenam
+                        seu orçamento.</p>
+                </div>
+            </div>
+            <div class="flex gap-4 items-start">
+                <div
+                    class="mt-1 w-8 h-8 rounded-full bg-google-redLight flex items-center justify-center flex-shrink-0">
+                    <div class="w-3 h-3 rounded-full bg-google-red"></div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Campanhas que Vendem</h4>
+                    <p class="text-slate-500">Crie campanhas de Google Ads que realmente geram vendas e leads
+                        qualificados todos os dias.</p>
+                </div>
+            </div>
+            <div class="flex gap-4 items-start">
+                <div
+                    class="mt-1 w-8 h-8 rounded-full bg-google-yellowLight flex items-center justify-center flex-shrink-0">
+                    <div class="w-3 h-3 rounded-full bg-google-yellow"></div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Escala com Lucro</h4>
+                    <p class="text-slate-500">Descubra como otimizar suas campanhas para crescer o faturamento sem
+                        aumentar proporcionalmente o custo.</p>
+                </div>
+            </div>
+            <div class="flex gap-4 items-start">
+                <div
+                    class="mt-1 w-8 h-8 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                    <div class="w-3 h-3 rounded-full bg-google-green"></div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Autonomia Total</h4>
+                    <p class="text-slate-500">Ganhe autonomia para fazer você mesmo ou acompanhar sua agência com olhar
+                        crítico e analítico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos do Curso -->
+    <section class="py-24 px-6 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 block">O que você vai
+                    aprender</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 mb-4">
+                    7 módulos do básico ao <span class="text-google-yellow">intermediário</span>
+                </h2>
+                <p class="text-slate-500 font-medium max-w-xl mx-auto">Conteúdo 100% online, gravado, com atualizações
+                    futuras incluídas.<br>Assista no seu ritmo, de onde quiser.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Modulo 1 (Azul) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-1">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/5QF75Kc/P-01.png" alt="Módulo 01" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-blue mb-4 leading-none">01</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Boas-vindas e Visão Geral</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Entenda como funciona o curso, o que você vai alcançar e como tirar o máximo proveito de cada aula.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 2 (Vermelho) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-2">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/vvmX2jpg/P-02.png" alt="Módulo 02" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-red mb-4 leading-none">02</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Introdução ao Google Ads</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Como a plataforma funciona, como o leilão de anúncios opera e por que isso afeta diretamente o seu resultado.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 3 (Amarelo) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-3">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/k6yB8W3H/P-03.png" alt="Módulo 03" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-yellow mb-4 leading-none">03</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Principais Erros de Iniciantes</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Os erros mais comuns que fazem empreendedores perderem dinheiro — e como evitá-los desde a primeira campanha.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 4 (Verde) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-4">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/605FVtk1/P-04.png" alt="Módulo 04" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-green mb-4 leading-none">04</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Planejamento Estratégico da Campanha</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Como estruturar sua campanha de forma inteligente antes de investir um centavo — a base do sucesso.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 5 (Azul) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-5">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/4ndb3bVP/P-05.png" alt="Módulo 05" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-blue mb-4 leading-none">05</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Criação de Anúncios e Segmentação</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Textos que geram cliques qualificados, escolha de palavras-chave certas e segmentação do público ideal.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 6 (Vermelho) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-6">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/bjBG9gmp/P-06.png" alt="Módulo 06" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-red mb-4 leading-none">06</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Acompanhamento e Otimização</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Como interpretar métricas, identificar o que está funcionando e cortar o que está desperdiçando dinheiro.</p>
+                    </div>
+                </div>
+
+                <!-- Modulo 7 (Amarelo) -->
+                <div class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden group reveal reveal-delay-7">
+                    <div class="w-full aspect-square overflow-hidden relative">
+                        <img src="https://i.ibb.co/Gvs4YM4Q/P-07.png" alt="Módulo 07" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="text-5xl font-black tracking-tighter text-google-yellow mb-4 leading-none">07</div>
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-3">Campanhas Avançadas para Escalar</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Estratégias para dobrar seu investimento com segurança e construir um fluxo previsível de clientes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bônus Exclusivos -->
+    <section class="py-24 px-6 bg-white border-b border-slate-100 relative overflow-hidden">
+
+        <!-- Decoration -->
+        <div class="absolute -left-32 -top-32 w-96 h-96 bg-google-green rounded-full blur-3xl opacity-10"></div>
+        <div class="absolute -right-32 -bottom-32 w-96 h-96 bg-white rounded-full blur-3xl opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span
+                    class="inline-block py-1 px-4 bg-google-green text-white rounded-full text-sm font-bold uppercase tracking-wider mb-4">
+                    Presentes Especiais
+                </span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-slate-900">
+                    Bônus que valem mais que o curso
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Bônus 1 -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-l-google-blue shadow-lg shadow-green-900/5 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="20" height="12" rx="2" />
+                            <circle cx="12" cy="12" r="2" />
+                            <path d="M6 12h.01M18 12h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Checklist de Palavras-chave Negativas</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Evite cliques errados e economize dinheiro desde o dia 1.</p>
+                    <span class="text-sm font-bold text-google-green line-through opacity-70">Valor: R$147</span> <span
+                        class="font-black text-google-blue ml-2">GRÁTIS</span>
+                </div>
+
+                <!-- Bônus 2 -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-l-google-red shadow-lg shadow-green-900/5 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Guia de Melhores Palavras-chave</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Encontre rapidamente as palavras que realmente convertem na
+                        sua área.</p>
+                    <span class="text-sm font-bold text-google-green line-through opacity-70">Valor: R$197</span> <span
+                        class="font-black text-google-red ml-2">GRÁTIS</span>
+                </div>
+
+                <!-- Bônus 3 -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-l-google-yellow shadow-lg shadow-green-900/5 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Google Ads Editor Express</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Aprenda a subir campanhas gigantes em poucos minutos e ganhe
+                        produtividade.</p>
+                    <span class="text-sm font-bold text-google-green line-through opacity-70">Valor: R$197</span> <span
+                        class="font-black text-google-yellow ml-2">GRÁTIS</span>
+                </div>
+
+                <!-- Bônus 4 -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-l-google-green shadow-lg shadow-green-900/5 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Landing Pages que Convertem</h3>
+                    <p class="text-slate-600 mb-4 text-sm">Curso extra: crie páginas profissionais que transformam
+                        cliques em clientes.</p>
+                    <span class="text-sm font-bold text-google-green line-through opacity-70">Valor: R$497</span> <span
+                        class="font-black text-google-green ml-2">GRÁTIS</span>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-slate-700 font-medium text-lg">Total em bônus que você recebe: <span
+                        class="font-black text-2xl text-google-green ml-2">R$ 1.038,00</span> (Completamente grátis)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social (Carrossel de Prints) -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 relative z-10 reveal text-center">
+            <h2 class="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">
+                Resultados <span class="text-google-blue">Reais</span>.
+            </h2>
+            <p class="text-slate-500 font-medium mt-4 max-w-2xl mx-auto">
+                Veja os resultados de quem já aplicou o método. Sem promessas vazias, apenas
+                faturamento.
+            </p>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="w-full relative">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 px-4 md:px-8 pb-12 pt-4 w-full max-w-[1600px] mx-auto">
+
+                <!-- COLOQUE SUAS FOTOS AQUI DENTRO DA TAG IMG (Substitua o SRC) -->
+
+                <!-- Print 1 -->
+                <div class="w-full rounded-2xl overflow-hidden relative group shadow-xl bg-[#0b141a]">
+                    <!-- Substitua o link abaixo pela URL da sua imagem (print do whatsapp) -->
+                    <img src="https://i.ibb.co/rGf2pKWB/print-apr-m-veis-1.jpg" alt="Print de Depoimento"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <!-- Print 2 -->
+                <div class="w-full rounded-2xl overflow-hidden relative group shadow-xl bg-[#0b141a]">
+                    <img src="https://i.ibb.co/LB0C50k/print-whatsapp-1.jpg" alt="Print de Depoimento"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <!-- Print 3 -->
+                <div class="w-full rounded-2xl overflow-hidden relative group shadow-xl bg-[#0b141a]">
+                    <img src="https://i.ibb.co/7dFPMJ2d/plataforma-3x-1.jpg" alt="Print de Depoimento"
+                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtro de Qualificação -->
+    <section class="py-24 px-6 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- O Público Ideal -->
+                <div
+                    class="bg-white border border-slate-100 rounded-3xl p-10 lg:p-14 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-google-blue font-bold tracking-widest uppercase text-sm mb-4 block">Este curso é
+                        para você se...</span>
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 tracking-tight">Você está no lugar
+                        certo</h3>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Você tem um negócio e quer
+                                atrair mais clientes online</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Nunca anunciou no Google e
+                                quer começar com segurança</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Já tentou e desperdiçou
+                                dinheiro sem entender o porquê</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Paga agência mas quer
+                                entender o que está sendo feito</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Quer ter campanhas rodando
+                                e gerando leads no automático</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Prefere aprender no seu
+                                ritmo, quando e onde quiser</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-greenLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-green" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Tem um negócio local ou de
+                                serviços e quer mais clientes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- O Público Desqualificado -->
+                <div
+                    class="bg-white border border-slate-100 rounded-3xl p-10 lg:p-14 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-google-red font-bold tracking-widest uppercase text-sm mb-4 block">Este curso não
+                        é para você se...</span>
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 tracking-tight">Seja honesto consigo
+                        mesmo</h3>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-redLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-red" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Você quer resultado sem
+                                nenhum esforço ou implementação</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-redLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-red" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Está procurando um atalho
+                                mágico para enriquecer da noite para o dia</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-redLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-red" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Não tem produto, serviço ou
+                                negócio para anunciar</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-6 h-6 rounded-full bg-google-redLight flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-google-red" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="3">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <span class="text-slate-600 font-medium text-lg leading-relaxed">Não tem disposição para
+                                aplicar o que aprender</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Especialista -->
+    <section class="py-24 px-6 bg-slate-50 relative overflow-hidden">
+        <!-- Shape removed to avoid blue tint -->
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+
+            <div class="order-2 lg:order-1 reveal from-left">
+                <img src="https://i.ibb.co/jvD8QP3y/alan.png" alt="Alan Lopes"
+                    class="w-full max-w-md mx-auto rounded-3xl shadow-xl shadow-slate-200">
+            </div>
+
+            <div class="order-1 lg:order-2 reveal from-right">
+                <span class="text-google-blue font-bold tracking-widest uppercase text-sm mb-2 block">Criador do
+                    Curso</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
+                    Alan Lopes
+                </h2>
+
+                <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                    Fundador da Agência Logar e especialista em Google Ads, Alan tem mais de 14 anos de experiência no
+                    mercado digital, incluindo atuação na primeira empresa parceira do Google no Brasil e passagem por
+                    agências renomadas.
+                </p>
+
+                <p class="text-lg text-slate-700 leading-relaxed mb-10">
+                    Ao longo da carreira, gerenciou mais de R$50 milhões em anúncios, atendendo grandes contas como
+                    Mackenzie, C&C, Grupo Paquetá e Electrolux. É o criador do Método 40-200 e hoje se dedica a ensinar
+                    empresários a assumirem o controle da geração de demanda — parando de rasgar dinheiro e construindo
+                    negócios lucrativos com clareza e previsibilidade.
+                </p>
+
+                <div class="flex gap-12">
+                    <div>
+                        <span
+                            class="block text-5xl md:text-6xl font-black tracking-tighter text-google-blue mb-1">R$50M+</span>
+                        <span class="text-sm font-semibold text-slate-600 uppercase tracking-wide">Em anúncios
+                            gerenciados</span>
+                    </div>
+                    <div>
+                        <span
+                            class="block text-5xl md:text-6xl font-black tracking-tighter text-google-red mb-1">14+</span>
+                        <span class="text-sm font-semibold text-slate-600 uppercase tracking-wide">Anos de
+                            experiência</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pacote Completo (O que você recebe) -->
+    <section class="py-24 px-6 bg-[#0d1117] text-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-14 reveal">
+                <span class="text-google-blue font-bold tracking-widest uppercase text-sm mb-4 block">Tudo que você
+                    recebe</span>
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-tight">
+                    Um pacote completo para<br>dominar o Google Ads
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Item 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Curso Google Ads do Zero</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">7 módulos do básico ao intermediário</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Acesso por 1 ano completo</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Com todas as atualizações futuras incluídas</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Bônus #1 – Checklist de Negativos</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Pronto para usar na sua primeira campanha</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Bônus #2 – Guia de Palavras-chave</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Encontre termos que realmente convertem</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Bônus #3 – Google Ads Editor</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Gerencie campanhas como um profissional</p>
+                </div>
+                <!-- Item 6 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Bônus #4 – Landing Pages Express</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Páginas que convertem sem precisar de dev</p>
+                </div>
+                <!-- Item 7 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Suporte por e-mail</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Tire dúvidas durante seu aprendizado</p>
+                </div>
+                <!-- Item 8 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div
+                            class="w-6 h-6 rounded-full bg-google-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Estude de onde quiser</h4>
+                    </div>
+                    <p class="text-google-blue text-sm font-medium ml-9">Celular, tablet ou computador</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta (Ticket de Compra) -->
+    <section id="oferta" class="py-32 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-2xl mx-auto">
+
+            <!-- Ticket -->
+            <div
+                class="bg-white rounded-[2rem] shadow-xl border-t-8 border-t-google-blue p-10 md:p-14 text-center relative overflow-hidden reveal scale-in">
+
+                <div class="absolute top-0 right-0 w-32 h-32 bg-google-red/5 rounded-full -mt-16 -mr-16"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-google-yellow/5 rounded-full -mb-16 -ml-16"></div>
+
+                <div class="relative z-10">
+                    <span
+                        class="inline-block py-1 px-4 bg-google-greenLight text-google-green font-bold text-xs uppercase tracking-widest rounded-full mb-6">
+                        Inscrições Abertas
+                    </span>
+                    <h2 class="text-3xl font-black text-slate-900 mb-2">Google Ads do Zero</h2>
+                    <p class="text-slate-500 font-medium mb-8">Acesso vitalício ao método completo + 4 Bônus Exclusivos
+                    </p>
+
+                    <div class="mb-10 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <span class="text-sm text-slate-400 line-through decoration-slate-300 font-bold">De R$ 2.035,00
+                            por:</span>
+                        <div class="flex items-end justify-center gap-2 mt-2 text-google-blue">
+                            <span class="text-2xl font-bold mb-1">12x</span>
+                            <span class="text-7xl font-black tracking-tighter leading-none">R$9,70</span>
+                        </div>
+                        <span class="text-sm text-slate-500 font-medium mt-3 block">ou R$97 à vista</span>
+                    </div>
+
+                    <a href="#"
+                        class="block w-full py-5 px-8 bg-google-blue hover:bg-[#3367D6] text-white font-bold text-lg md:text-xl rounded-xl uppercase tracking-wide transition-all hover:-translate-y-1 shadow-[0_8px_30px_rgba(66,133,244,0.3)] mb-6">
+                        ⚡ Quero garantir minha vaga
+                    </a>
+
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-slate-500 font-semibold">
+                        <div class="flex items-center gap-1.5">
+                            <svg class="text-google-green w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Garantia de 7 Dias
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <svg class="text-google-yellow w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            Pagamento Seguro
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-[#0d1117]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-white leading-tight">Ainda tem
+                    dúvidas?<br><span class="text-google-blue">A gente responde.</span></h2>
+            </div>
+
+            <div class="space-y-px">
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        Preciso ter experiência com Google Ads?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Não. O curso foi criado para quem nunca criou um anúncio na vida. Começamos do zero absoluto:
+                        criação de conta, configurações básicas, estrutura de campanha, até as otimizações avançadas.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        O curso serve para qualquer tipo de negócio?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Sim. O método foi desenvolvido para negócios locais, prestadores de serviço, e-commerces e
+                        infoprodutos. Se você tem um produto ou serviço e quer gerar demanda online, este curso é para
+                        você.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        Vou aprender a fazer campanhas sozinho?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Sim. Esse é o objetivo principal: te dar autonomia total. Você vai aprender a criar, configurar,
+                        otimizar e escalar campanhas sem depender de agência ou profissional externo.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        Quanto tempo tenho de acesso?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Você tem acesso por 1 ano completo, com todas as atualizações futuras incluídas. O Google Ads
+                        muda constantemente — e você sempre terá o conteúdo atualizado.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        Preciso de muito dinheiro para anunciar no Google?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Não. É possível começar com orçamentos a partir de R$10 a R$20 por dia. O método ensina
+                        justamente como extrair o máximo de resultado com o menor investimento possível, evitando
+                        desperdícios.
+                    </p>
+                </details>
+
+                <details class="group border-b border-white/10 [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between font-bold text-white text-lg py-6 gap-4">
+                        Como funciona a garantia?
+                        <span
+                            class="transition group-open:rotate-180 flex-shrink-0 w-9 h-9 rounded-full bg-google-blue/20 flex items-center justify-center text-google-blue">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 font-medium pb-6 leading-relaxed">
+                        Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta
+                        solicitar o reembolso dentro da plataforma e o valor é devolvido 100% — sem burocracia e sem
+                        perguntas.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-slate-100 text-center">
+        <p class="text-slate-400 font-medium text-sm">© 2024 Google Ads do Zero. Alan Lopes. Todos os direitos
+            reservados.</p>
+    </footer>
+
+</body>
+
+<script>
+    // ===== SCROLL REVEAL via IntersectionObserver =====
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // anima só uma vez
+            }
+        });
+    }, { threshold: 0.12 });
+
+    // Aplica .reveal em todos os elementos marcados
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</html>
