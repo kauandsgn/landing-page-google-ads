@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -620,7 +622,7 @@
         </div>
     </section>
 
-    <!-- Prova Social (Carrossel de Prints) -->
+    <!-- Prova Social -->
     <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-12 relative z-10 reveal text-center">
             <h2 class="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">
@@ -632,10 +634,10 @@
             </p>
         </div>
 
-        <!-- Grid Container -->
-        <div class="w-full relative">
+        <!-- Grid Container (Prints) -->
+        <div class="w-full relative mb-12">
             <div
-                class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 px-4 md:px-8 pb-12 pt-4 w-full max-w-[1600px] mx-auto">
+                class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 px-4 md:px-8 pb-8 pt-4 w-full max-w-[1600px] mx-auto">
 
                 <!-- COLOQUE SUAS FOTOS AQUI DENTRO DA TAG IMG (Substitua o SRC) -->
 
@@ -658,6 +660,43 @@
                         class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Swiper Container (Videos Shorts) -->
+        <div class="w-full relative px-6 md:px-12 max-w-[1600px] mx-auto">
+            <div class="swiper mySwiper !pb-14">
+                <div class="swiper-wrapper">
+                    <!-- Video 1 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-[#0b141a]">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/2Fl-71w0Czw" title="Depoimento 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-[#0b141a]">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/1wkVxmu_QKg" title="Depoimento 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video 3 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-[#0b141a]">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Vo4x_pj1AUY" title="Depoimento 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video 4 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-[#0b141a]">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/4dj7uNyK5n0" title="Depoimento 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navegação e Paginação -->
+                <div class="swiper-pagination !bottom-0"></div>
+                <div class="swiper-button-prev !text-google-blue after:!text-2xl !-left-2 md:!left-0 bg-white/90 w-10 h-10 rounded-full shadow-md backdrop-blur flex items-center justify-center border border-slate-100"></div>
+                <div class="swiper-button-next !text-google-blue after:!text-2xl !-right-2 md:!right-0 bg-white/90 w-10 h-10 rounded-full shadow-md backdrop-blur flex items-center justify-center border border-slate-100"></div>
             </div>
         </div>
     </section>
@@ -1225,7 +1264,37 @@
 
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+    // ===== SWIPER INIT =====
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        }
+    });
+
     // ===== SCROLL REVEAL via IntersectionObserver =====
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
